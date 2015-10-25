@@ -4,21 +4,23 @@
  * use window/document functions like getComputedStyle.
  */
 
-ReaderArticleFinder = function (contentDocument) {
+/**
+ * @class articleFinder
+ * @param {object} contentDocument - the html document to look for a article in
+ */
+ArticleFinder = function (contentDocument) {
     this.contentDocument = contentDocument;
     this.didSearchForArticleNode = false;
     this.article = null;
     this.didSearchForExtraArticleNode = false;
     this.extraArticle = null;
     this.leadingImage = null;
-    this._cachedScrollY = 0;
-    this._cachedScrollX = 0;
     this._elementsWithCachedBoundingRects = [];
     this._cachedContentTextStyle = null;
     this.pageNumber = 1;
     this.prefixWithDateForNextPageURL = null;
 }
-ReaderArticleFinder.prototype = {
+ArticleFinder.prototype = {
     isReaderModeAvailable: function isReaderModeAvailable() {
         this.cacheWindowScrollPosition();
         var article = this.articleNode();
@@ -35,7 +37,7 @@ ReaderArticleFinder.prototype = {
         if (this._nextPageURL === undefined) {
             var nextPageURLString = this.nextPageURLString();
             if (nextPageURLString) {
-                nextPageURLString = ReaderArticleFinderJSController.substituteURLForNextPageURL(nextPageURLString);
+                nextPageURLString = ArticleFinderJSController.substituteURLForNextPageURL(nextPageURLString);
             }
             this._nextPageURL = nextPageURLString;
         }
@@ -92,10 +94,6 @@ ReaderArticleFinder.prototype = {
             this.didSearchForExtraArticleNode = true;
         }
         return this.extraArticle ? this.extraArticle.element : null;
-    },
-    cacheWindowScrollPosition: function cacheWindowScrollPosition() {
-        this._cachedScrollY = window.scrollY;
-        this._cachedScrollX = window.scrollX;
     },
     contentTextStyle: function contentTextStyle() {
         if (this._cachedContentTextStyle)
@@ -874,7 +872,7 @@ ReaderArticleFinder.prototype = {
             if (candidate)
                 candidateElements.push(candidate);
             if (Date.now() > findCandidateElementsTimeoutDate) {
-                console.assert(false, "ReaderArticleFinder aborting CandidateElement detection due to timeout");
+                console.assert(false, "ArticleFinder aborting CandidateElement detection due to timeout");
                 candidateElements = [];
                 break;
             }
@@ -1154,4 +1152,4 @@ ReaderArticleFinder.prototype = {
         return info;
     }
 }
-var ReaderArticleFinderJS = new ReaderArticleFinder(document);
+var ArticleFinderJS = new ArticleFinder(document);
