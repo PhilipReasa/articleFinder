@@ -9,12 +9,12 @@ app.enable("jsonp callback");
 
 app.get('/', function(req, res) {
     var urlToSearch = req.query.url;
-    console.log(urlToSearch);
+    //console.log(urlToSearch);
     jsdom.env({
         url: urlToSearch,
         src: [articleFinderJS],
         done: function (err, window) {
-            console.log(err);
+            //console.log(err);
             var data = window.ReaderArticleFinderJS.articleNode(true);
             res.setHeader("Content-Type", "application/javascript")
             res.jsonp({html: data.outerHTML});
