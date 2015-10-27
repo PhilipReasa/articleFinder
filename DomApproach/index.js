@@ -19,7 +19,7 @@ app.get('/', function(req, res) {
         url: urlToSearch,
         src: [articleFinderJS],
         done: function (err, window) {
-            if(err == null || err == undefined) {
+            if(err != null && err != undefined) {
                 try {
                     window.close()
                 } catch(e) {}
