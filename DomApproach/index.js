@@ -31,6 +31,7 @@ app.get('/', function(req, res) {
             if(data == undefined || data == null) {
                 window.close();
                 res.status("404").send("not able to find article");
+                return;
             }
 
             res.setHeader("Content-Type", "application/javascript");
