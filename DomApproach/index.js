@@ -11,7 +11,7 @@ app.get('/', function(req, res) {
     var urlToSearch = req.query.url;
 
     if(urlToSearch == null || urlToSearch == undefined || urlToSearch == "") {
-        //try to catch common fail cases
+        res.status("404").send("bad url");
         return;
     }
 
@@ -19,17 +19,18 @@ app.get('/', function(req, res) {
         url: urlToSearch,
         src: [articleFinderJS],
         done: function (err, window) {
-            if(err == null) {
+            if(err == null || err == undefined) {
                 try {
                     window.close()
                 } catch(e) {}
+                res.status("404").send("error parsing document");
                 return;
             }
 
             var data = window.ReaderArticleFinderJS.articleNode(true);
             if(data == undefined || data == null) {
                 window.close();
-                return;
+                res.status("404").send("not able to find article");
             }
 
             res.setHeader("Content-Type", "application/javascript");

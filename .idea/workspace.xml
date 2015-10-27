@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d49b8d0-b536-4311-b9bc-d146117a274a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/content api.paw" afterPath="$PROJECT_DIR$/content api.paw" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DomApproach/index.js" afterPath="$PROJECT_DIR$/DomApproach/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="siteContent.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -75,8 +73,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DomApproach/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4768786">
-              <caret line="28" column="70" selection-start-line="28" selection-start-column="70" selection-end-line="28" selection-end-column="70" />
+            <state vertical-scroll-proportion="0.433526">
+              <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="27" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -582,8 +580,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DomApproach/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4768786">
-          <caret line="28" column="70" selection-start-line="28" selection-start-column="70" selection-end-line="28" selection-end-column="70" />
+        <state vertical-scroll-proportion="0.433526">
+          <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="27" selection-end-column="13" />
           <folding />
         </state>
       </provider>
