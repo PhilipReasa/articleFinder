@@ -3,5 +3,10 @@
   "version": "1.0.0",
   "description": "Find content from web pages",
   "main": "app.js",
-  "author": "Philip Reasa"
+  "author": "Philip Reasa",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "jsdom": "^9.4.1"
+  }
 }

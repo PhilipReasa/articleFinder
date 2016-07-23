@@ -1,5 +1,5 @@
 var express = require('express');
-var jsdom = require("./node_modules/jsdom");
+var jsdom = require("jsdom");
 var fs = require("fs");
 var articleFinderJS = fs.readFileSync("./articleFinder.js", "utf-8");
 
