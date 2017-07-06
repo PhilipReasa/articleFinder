@@ -1,19 +1,19 @@
-# articleFinder
+# ArticleFinder
 A server side, node based, service that accepts a url, and returns it's best guess of the article on that page.
 
-Go to [drudge.probitytechnology.com](http://drudge.probitytechnology.com/) to see this API in work
+Go to ~~[drudge.probitytechnology.com](http://drudge.probitytechnology.com/)~~ to see this API in work (no longer hosted)
 
-##Setup
+## Setup
 `npm install` - load up all of the dependencies
 
 `node app.js` - start the app!
 
-##API
+## API
 Once the app is running, go to `localhost:3000` in your web browser.
 
 There is only one endpoint (`/`), with one `GET` param (`url`)
 
-###Examples
+### Examples
 
 `localhost:3000/?url=URL_TO_PAGE_THAT_HAS_AN_ARTICLE`
 
